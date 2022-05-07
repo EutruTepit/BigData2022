@@ -18,4 +18,12 @@ estrutura = { 'comp_sepala': comp_sepala, 'comp_petala': comp_petala }
 
 df = pd.DataFrame(estrutura, index=[0])
 
+st.write('### Parametros de entrada:')
 st.write(df)
+
+df = ss.transform(df)
+st.write(df)
+
+predicao = dtc.predict(df)
+st.write(f"Classe dessa flor é: **{predicao}**")
+
