@@ -27,6 +27,8 @@ st.write(df)
 predicao = dtc.predict(df)
 st.write(f"Classe dessa flor é: **{predicao[0]}**")
 
+predicao = pd.DataFrame(predicao)
+
 mapeamento = {
   0: 'Iris-setosa',
   1: 'Iris-versicolor',
