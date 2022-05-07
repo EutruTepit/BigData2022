@@ -34,7 +34,7 @@ mapeamento = {
 }
 
 predicao_proba = dtc.predict_proba(df)
-predicao = pd.DataFrame(predicao)
+predicao_proba = pd.DataFrame(predicao_proba)
 predicao_proba.rename(mapeamento, axis=1, inplace=true)
 
 st.write(f"Probabilidade: {predicao_proba}")
