@@ -25,5 +25,7 @@ df = ss.transform(df)
 st.write(df)
 
 predicao = dtc.predict(df)
-st.write(f"Classe dessa flor é: **{predicao}**")
+st.write(f"Classe dessa flor é: **{predicao[0]}**")
 
+predicao_proba = dtc.predict_proba(df)
+st.write(f"Probabilidade: {predicao_proba}")
