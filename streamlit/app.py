@@ -27,5 +27,13 @@ st.write(df)
 predicao = dtc.predict(df)
 st.write(f"Classe dessa flor é: **{predicao[0]}**")
 
+mapeamento = {
+  0: 'Iris-setosa',
+  1: 'Iris-versicolor',
+  2: 'Iris-virginica',
+}
+
 predicao_proba = dtc.predict_proba(df)
-st.write(f"Probabilidade: {predicao_proba[0]}")
+predicao_proba.rename(mapeamento)
+
+st.write(f"Probabilidade: {predicao_proba}")
