@@ -84,3 +84,6 @@ df = pd.DataFrame(estrutura, index=[0])
 
 st.write('### Parametros de entrada:')
 st.write(df)
+
+predicao = dtc.predict(df)
+st.write(f"O tipo de cancer predito é: **{predicao[0]}**")
