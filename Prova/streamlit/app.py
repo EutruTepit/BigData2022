@@ -83,10 +83,10 @@ estrutura = {
 df = pd.DataFrame(estrutura, index=[0])
 
 st.write('### Parametros de entrada:')
-st.dataframe(df, height=500)
+st.dataframe(df.style.highlight_max(axis=0))
 
 df = ss.transform(df)
-st.dataframe(df, height=500)
+st.dataframe(df.style.highlight_max(axis=0))
 
 predicao = dtc.predict(df)
 #predicao[0].map({0:'benigno', 1:'maligno'})
