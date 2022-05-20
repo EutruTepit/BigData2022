@@ -89,5 +89,5 @@ df = ss.transform(df)
 st.write(df)
 
 predicao = dtc.predict(df)
-pred = predicao[0].map({0:'benigno', 1:'maligno'})
+pred = predicao[0].map({'0':'benigno', '1':'maligno'})
 st.write(f"O tipo de cancer predito é: **{pred}**")
