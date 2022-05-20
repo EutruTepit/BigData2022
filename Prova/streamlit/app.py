@@ -42,7 +42,7 @@ pontos_concavos_2 = st.sidebar.slider('pontos concavos 2', 0.00, 0.30, 0.12, 0.0
 simetria_2 = st.sidebar.slider('simetria 2', 0.15, 0.70, 0.30, 0.05)
 dimencao_fracional_2 = st.sidebar.slider('dimencao fracional 2', 0.055, 0.210, 0.085, 0.005)
 
-with open('/app/bigdata2022/Prova/streamlit/objetos.pkl', 'rb') as arquivo:
+with open('/app/bigdata2022/Prova/streamlit/objetos1.pkl', 'rb') as arquivo:
     ss, dtc = pickle.load(arquivo)
 
 estrutura = {
