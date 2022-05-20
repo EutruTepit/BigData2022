@@ -101,7 +101,7 @@ predicao_proba = dtc.predict_proba(df)
 predicao_proba = pd.DataFrame(predicao_proba)
 predicao_proba.rename(mapeamento, axis=1, inplace=True)
 
-pred = predicao.map(mapeamento)
+pred = predicao.rename(mapeamento)
 
 st.write(f"O tipo de cancer predito é: **{pred}**")
 st.write(f"Probabilidade:")
