@@ -1,3 +1,4 @@
+from unittest import result
 import streamlit as st
 import pickle
 from sklearn.preprocessing import StandardScaler
@@ -89,8 +90,13 @@ df = ss.transform(df)
 st.write(df)
 
 predicao = dtc.predict(df)
-#predicao[0].map({0:'benigno', 1:'maligno'})
-st.write(f"O tipo de cancer predito é: **{predicao[0]}**")
+
+if (predicao[0] == 0):
+  resultado = "Benigno"
+else:
+  resultado = "Maligno"
+
+st.write(f"O tipo de cancer predito é: **{resultado}**")
 
 mapeamento = {
   0: "Benigno",
