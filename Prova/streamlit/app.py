@@ -90,7 +90,7 @@ st.write(df)
 
 predicao = dtc.predict(df)
 #predicao[0].map({0:'benigno', 1:'maligno'})
-st.write(f"O tipo de cancer predito é: **{predicao}**")
+st.write(f"O tipo de cancer predito é: **{predicao[0]}**")
 
 mapeamento = {
   0: "Benigno",
