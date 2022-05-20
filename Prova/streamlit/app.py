@@ -89,9 +89,6 @@ df = ss.transform(df)
 st.write(df)
 
 predicao = dtc.predict(df)
-#predicao[0].map({0:'benigno', 1:'maligno'})
-st.write(f"O tipo de cancer predito é: **{predicao[0]}**")
-
 mapeamento = {
   0: "Benigno",
   1: "Maligno"
@@ -101,5 +98,6 @@ predicao_proba = dtc.predict_proba(df)
 predicao_proba = pd.DataFrame(predicao_proba)
 predicao_proba.rename(mapeamento, axis=1, inplace=True)
 
+st.write(f"O tipo de cancer predito é: **{predicao[0]}**")
 st.write(f"Probabilidade:")
 st.write(predicao_proba)
