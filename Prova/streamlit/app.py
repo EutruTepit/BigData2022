@@ -45,3 +45,39 @@ dimencao_fracional_2 = st.sidebar.slider('dimencao fracional 2', 0.055, 0.210, 0
 with open('./streamlit/objetos2.pkl', 'rb') as arquivo:
     ss, dtc = pickle.load(arquivo)
 
+estrutura = {
+  'raio_0' : raio_0,
+  'textura_0' : textura_0,
+  'perimetro_0' : perimetro_0,
+  'area_0' : area_0,
+  'suavizacao_0' : suavizacao_0,
+  'compactacao_0' : compactacao_0,
+  'concavidade_0' : concavidade_0,
+  'pontos_concavos_0' : pontos_concavos_0,
+  'simetria_0' : simetria_0,
+  'dimencao_fracional_0' : dimencao_fracional_0,
+
+  'raio_1' : raio_1,
+  'textura_1' : textura_1,
+  'perimetro_1' : perimetro_1,
+  'area_1' : area_1,
+  'suavizacao_1' : suavizacao_1,
+  'compactacao_1' : compactacao_1,
+  'concavidade_1' : concavidade_1,
+  'pontos_concavos_1' : pontos_concavos_1,
+  'simetria_1' : simetria_1,
+  'dimencao_fracional_1' : dimencao_fracional_1,
+
+  'raio_2' : raio_2,
+  'textura_2' : textura_2,
+  'perimetro_2' : perimetro_2,
+  'area_2' : area_2,
+  'suavizacao_2' : suavizacao_2,
+  'compactacao_2' : compactacao_2,
+  'concavidade_2' : concavidade_2,
+  'pontos_concavos_2' : pontos_concavos_2,
+  'simetria_2' : simetria_2,
+  'dimencao_fracional_2' : dimencao_fracional_2,
+}
+
+df = pd.DataFrame(estrutura, index=[0])
