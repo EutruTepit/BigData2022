@@ -81,3 +81,6 @@ estrutura = {
 }
 
 df = pd.DataFrame(estrutura, index=[0])
+
+st.write('### Parametros de entrada:')
+st.write(df)
