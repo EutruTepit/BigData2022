@@ -83,10 +83,10 @@ estrutura = {
 df = pd.DataFrame(estrutura, index=[0])
 
 st.write('### Parametros de entrada:')
-st.write(df)
+st.dataframe(df)
 
 df = ss.transform(df)
-st.write(df)
+st.dataframe(df)
 
 predicao = dtc.predict(df)
 #predicao[0].map({0:'benigno', 1:'maligno'})
