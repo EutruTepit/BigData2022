@@ -8,17 +8,17 @@ st.write('# Prova 1')
 st.write('## Predição de cancer de mama.')
 
 st.sidebar.write('### Parametros')
-
-raio_0 = st.sidebar.slider('raio 0', 6.0, 30.0, 14.1, 0.1)
-textura_0 = st.sidebar.slider('textura 0', 9.0, 40.0, 4.3, 0.1)
-perimetro_0 = st.sidebar.slider('perimetro 0', 43.0, 190.0, 24.2, 0.1)
-area_0 = st.sidebar.slider('area 0', 140.0, 2501.0, 352.0, 1.0)
-suavizacao_0 = st.sidebar.slider('suavizacao 0', 0.03, 0.17, 0.01, 0.01)
-compactacao_0 = st.sidebar.slider('compactacao 0', 0.01, 0.35, 0.05, 0.01)
-concavidade_0 = st.sidebar.slider('concavidade 0', 0.00, 0.43, 0.07, 0.01)
-pontos_concavos_0 = st.sidebar.slider('pontos concavos 0', 0.00, 0.20, 0.04, 0.01)
-simetria_0 = st.sidebar.slider('simetria 0', 0.10, 0.30, 0.02, 0.01)
-dimencao_fracional_0 = st.sidebar.slider('dimencao fracional 0', 0.04, 0.10, 0.06, 0.01)
+with st.expander('Grupo de celulas 0'):
+  raio_0 = st.sidebar.slider('raio 0', 6.0, 30.0, 14.1, 0.1)
+  textura_0 = st.sidebar.slider('textura 0', 9.0, 40.0, 4.3, 0.1)
+  #perimetro_0 = st.sidebar.slider('perimetro 0', 43.0, 190.0, 24.2, 0.1)
+  #area_0 = st.sidebar.slider('area 0', 140.0, 2501.0, 352.0, 1.0)
+  suavizacao_0 = st.sidebar.slider('suavizacao 0', 0.03, 0.17, 0.01, 0.01)
+  compactacao_0 = st.sidebar.slider('compactacao 0', 0.01, 0.35, 0.05, 0.01)
+  concavidade_0 = st.sidebar.slider('concavidade 0', 0.00, 0.43, 0.07, 0.01)
+  pontos_concavos_0 = st.sidebar.slider('pontos concavos 0', 0.00, 0.20, 0.04, 0.01)
+  simetria_0 = st.sidebar.slider('simetria 0', 0.10, 0.30, 0.02, 0.01)
+  dimencao_fracional_0 = st.sidebar.slider('dimencao fracional 0', 0.04, 0.10, 0.06, 0.01)
 
 raio_1 = st.sidebar.slider('raio 1', 0.11, 3.0, 0.40, 0.01)
 textura_1 = st.sidebar.slider('textura 1', 0.30, 5.00, 2.86, 0.05)
@@ -48,8 +48,8 @@ with open('/app/bigdata2022/Prova/streamlit/objetos2.pkl', 'rb') as arquivo:
 estrutura = {
   'raio_0' : raio_0,
   'textura_0' : textura_0,
-  'perimetro_0' : perimetro_0,
-  'area_0' : area_0,
+  #'perimetro_0' : perimetro_0,
+  #'area_0' : area_0,
   'suavizacao_0' : suavizacao_0,
   'compactacao_0' : compactacao_0,
   'concavidade_0' : concavidade_0,
