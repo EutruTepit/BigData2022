@@ -89,7 +89,7 @@ df = ss.transform(df)
 st.write(df)
 
 predicao = dtc.predict(df)
-predicao[0] = "Benigno" if (predicao[0] == 0) else "Maligno"
+#predicao[0].map({0:'benigno', 1:'maligno'})
 st.write(f"O tipo de cancer predito é: **{predicao[0]}**")
 
 mapeamento = {
